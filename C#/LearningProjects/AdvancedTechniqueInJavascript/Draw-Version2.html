@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Draw - version 2</title>
+    <style>
+        #theCanvas {
+            background-image: -moz-radial-gradient(30px 30px, #FFF, #EEF);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="theCanvas" width="640" height="480">
+        Attention! Your browser does not support the Canvas
+    </canvas>
+    <script>
+        _KSM = {
+            //This is a stub function that works just like a proxy, calling the lastest created function
+            drawOld: function(left, top, width, height){
+                _KSM.draw(left, top, width, height, 'black', 'silver');
+            },
+            draw: function (left, top, width, height, stroke, fill) {
+                //Draw something on the canvas
+                var canvas = document.getElementById('theCanvas');
+                if (canvas.getContext) {
+                    //Defining default values for parameters
+                    if (typeof left === 'undefined') left = 10;
+                    if (typeof top === 'undefined') top = 10;
+                    if (typeof width === 'undefined') width = 100;
+                    if (typeof height === 'undefined') height = 100;
+                    if (typeof fill === 'undefined') fill = 'silver';
+                    if (typeof stroke === 'undefined') stroke = 'black';
+
+
+                    var context = canvas.getContext('2d');
+                    context.strokeStyle = stroke;
+                    context.fillStyle = fill;
+
+                    //Parameters: left, top, width and height
+                    context.fillRect(left,top, width, height);
+                    context.strokeRect(left, top, width, height);
+                }
+            }
+        };
+
+        _KSM.draw();
+        _KSM.drawOld(20, 30, 40, 20);
+        _KSM.draw(100, 100, 440, 280, 'burlywood', 'lemonchiffon');
+    </script>
+</body>
+</html>

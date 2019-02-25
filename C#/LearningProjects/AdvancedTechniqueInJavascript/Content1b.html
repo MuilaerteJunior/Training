@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<div id="Content1">
+    This is content #1
+</div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+
+            $('#Content1')
+                .append('<hr />')
+                .append('more content loaded dynamically')
+                .trigger('complete');
+                //.trigger('failure', { statusText: 'Error!' });
+        }, 3000);
+    });
+</script>

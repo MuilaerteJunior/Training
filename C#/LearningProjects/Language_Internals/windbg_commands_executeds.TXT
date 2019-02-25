@@ -1,0 +1,192 @@
+
+Microsoft (R) Windows Debugger Version 10.0.14321.1024 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: C:\Desenvolvimento\Projetos\Aprendizado\LearningProjects\Language_Internals\jit.exe
+Symbol search path is: srv*
+Executable search path is: 
+ModLoad: 00000000`007d0000 00000000`007d8000   image00000000`007d0000
+ModLoad: 00007fff`e4760000 00007fff`e4931000   ntdll.dll
+ModLoad: 00007fff`cd760000 00007fff`cd7c6000   C:\WINDOWS\SYSTEM32\MSCOREE.DLL
+ModLoad: 00007fff`e3400000 00007fff`e34ab000   C:\WINDOWS\System32\KERNEL32.dll
+ModLoad: 00007fff`e1a00000 00007fff`e1c1d000   C:\WINDOWS\System32\KERNELBASE.dll
+(304.11ac): Break instruction exception - code 80000003 (first chance)
+ntdll!LdrpDoDebuggerBreak+0x30:
+00007fff`e48334e0 cc              int     3
+0:000> sxe ld clrjit
+0:000> g
+(304.11ac): Unknown exception - code 04242420 (first chance)
+ModLoad: 00007fff`c1f60000 00007fff`c206e000   C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clrjit.dll
+ntdll!NtMapViewOfSection+0x14:
+00007fff`e48065d4 c3              ret
+0:000> .loadby sos clr
+0:000> !bpmd jit.exe Program.Demo
+c0000005 Exception in C:\Windows\Microsoft.NET\Framework64\v4.0.30319\sos.bpmd debugger extension.
+      PC: 00007fff`adbb6cef  VA: 00000000`00000000  R/W: 0  Parameter: 00000000`00000000
+0:000> !bpmd jit.exe Program.Demo
+Found 1 methods in module 00007fff6cc340e0...
+MethodDesc = 00007fff6cc359b8
+Adding pending breakpoints...
+0:000> g
+(304.11ac): CLR notification exception - code e0444143 (first chance)
+JITTED jit!Language_Internals.Program.Demo()
+Setting breakpoint: bp 00007FFF6CD404FC [Language_Internals.Program.Demo()]
+Breakpoint 0 hit
+00007fff`6cd404fc 90              nop
+0:000> !dumpil 00007fff6cc359b8
+ilAddr = 00000000007d2060
+IL_0000: nop 
+IL_0001: ldc.i4.1 
+IL_0002: ldc.i4.2 
+IL_0003: call Language_Internals.Program::Add
+IL_0008: stloc.0 
+IL_0009: ldloc.0 
+IL_000a: call System.Console::WriteLine 
+IL_000f: nop 
+IL_0010: ldc.i4.2 
+IL_0011: ldc.i4.3 
+IL_0012: call Language_Internals.Program::Add
+IL_0017: stloc.1 
+IL_0018: ldloc.1 
+IL_0019: call System.Console::WriteLine 
+IL_001e: nop 
+IL_001f: ret 
+0:000> !U 00007fff6cc359b8
+Normal JIT generated code
+Language_Internals.Program.Demo()
+Begin 00007fff6cd404d0, size 77
+*** WARNING: Unable to verify checksum for image00000000`007d0000
+*** ERROR: Module load completed but symbols could not be loaded for image00000000`007d0000
+00007fff`6cd404d0 55              push    rbp
+00007fff`6cd404d1 57              push    rdi
+00007fff`6cd404d2 4883ec38        sub     rsp,38h
+00007fff`6cd404d6 488d6c2440      lea     rbp,[rsp+40h]
+00007fff`6cd404db 488d7de8        lea     rdi,[rbp-18h]
+00007fff`6cd404df b904000000      mov     ecx,4
+00007fff`6cd404e4 33c0            xor     eax,eax
+00007fff`6cd404e6 f3ab            rep stos dword ptr [rdi]
+00007fff`6cd404e8 48b86045c36cff7f0000 mov rax,7FFF6CC34560h
+00007fff`6cd404f2 833800          cmp     dword ptr [rax],0
+00007fff`6cd404f5 7405            je      00007fff`6cd404fc
+00007fff`6cd404f7 e8244eaa5f      call    clr!JIT_DbgIsJustMyCode (00007fff`cc7e5320)
+00007fff`6cd404fc 90              nop
+00007fff`6cd404fd b901000000      mov     ecx,1
+00007fff`6cd40502 ba02000000      mov     edx,2
+00007fff`6cd40507 e87cfbffff      call    00007fff`6cd40088 (Language_Internals.Program.Add(Int32, Int32), mdToken: 0000000006000003)
+00007fff`6cd4050c 8945ec          mov     dword ptr [rbp-14h],eax
+00007fff`6cd4050f 8b4dec          mov     ecx,dword ptr [rbp-14h]
+00007fff`6cd40512 894df4          mov     dword ptr [rbp-0Ch],ecx
+00007fff`6cd40515 8b4df4          mov     ecx,dword ptr [rbp-0Ch]
+00007fff`6cd40518 e8c3765a5e      call    mscorlib_ni+0xcf7be0 (00007fff`cb2e7be0) (System.Console.WriteLine(Int32), mdToken: 0000000006000a73)
+00007fff`6cd4051d 90              nop
+00007fff`6cd4051e b902000000      mov     ecx,2
+00007fff`6cd40523 ba03000000      mov     edx,3
+00007fff`6cd40528 e85bfbffff      call    00007fff`6cd40088 (Language_Internals.Program.Add(Int32, Int32), mdToken: 0000000006000003)
+00007fff`6cd4052d 8945e8          mov     dword ptr [rbp-18h],eax
+00007fff`6cd40530 8b4de8          mov     ecx,dword ptr [rbp-18h]
+00007fff`6cd40533 894df0          mov     dword ptr [rbp-10h],ecx
+00007fff`6cd40536 8b4df0          mov     ecx,dword ptr [rbp-10h]
+00007fff`6cd40539 e8a2765a5e      call    mscorlib_ni+0xcf7be0 (00007fff`cb2e7be0) (System.Console.WriteLine(Int32), mdToken: 0000000006000a73)
+00007fff`6cd4053e 90              nop
+00007fff`6cd4053f 90              nop
+00007fff`6cd40540 488d65f8        lea     rsp,[rbp-8]
+00007fff`6cd40544 5f              pop     rdi
+00007fff`6cd40545 5d              pop     rbp
+00007fff`6cd40546 c3              ret
+0:000> u 00007fff`6cd40088
+00007fff`6cd40088 e8c342605f      call    clr!PrecodeFixupThunk (00007fff`cc344350)
+00007fff`6cd4008d 5e              pop     rsi
+00007fff`6cd4008e 0401            add     al,1
+00007fff`6cd40090 e8bb42605f      call    clr!PrecodeFixupThunk (00007fff`cc344350)
+00007fff`6cd40095 5e              pop     rsi
+00007fff`6cd40096 06              ???
+00007fff`6cd40097 00a859c36cff    add     byte ptr [rax-933CA7h],ch
+00007fff`6cd4009d 7f00            jg      00007fff`6cd4009f
+0:000> !bpmd jit.exe Program.Add
+Found 1 methods in module 00007fff6cc340e0...
+MethodDesc = 00007fff6cc359c8
+Adding pending breakpoints...
+0:000> g
+(304.11ac): CLR notification exception - code e0444143 (first chance)
+JITTED jit!Language_Internals.Program.Add(Int32, Int32)
+Setting breakpoint: bp 00007FFF6CD40589 [Language_Internals.Program.Add(Int32, Int32)]
+Breakpoint 1 hit
+00007fff`6cd40589 90              nop
+0:000> !dumpil 00007fff6cc359c8
+ilAddr = 00000000007d208c
+IL_0000: nop 
+IL_0001: ldarg.0 
+IL_0002: ldarg.1 
+IL_0003: add 
+IL_0004: stloc.0 
+IL_0005: br.s IL_0007
+IL_0007: ldloc.0 
+IL_0008: ret 
+0:000> !U 00007fff6cc359c8
+Normal JIT generated code
+Language_Internals.Program.Add(Int32, Int32)
+Begin 00007fff6cd40560, size 41
+00007fff`6cd40560 55              push    rbp
+00007fff`6cd40561 4883ec30        sub     rsp,30h
+00007fff`6cd40565 488d6c2430      lea     rbp,[rsp+30h]
+00007fff`6cd4056a 33c0            xor     eax,eax
+00007fff`6cd4056c 8945fc          mov     dword ptr [rbp-4],eax
+00007fff`6cd4056f 894d10          mov     dword ptr [rbp+10h],ecx
+00007fff`6cd40572 895518          mov     dword ptr [rbp+18h],edx
+00007fff`6cd40575 48b86045c36cff7f0000 mov rax,7FFF6CC34560h
+00007fff`6cd4057f 833800          cmp     dword ptr [rax],0
+00007fff`6cd40582 7405            je      00007fff`6cd40589
+00007fff`6cd40584 e8974daa5f      call    clr!JIT_DbgIsJustMyCode (00007fff`cc7e5320)
+00007fff`6cd40589 90              nop
+00007fff`6cd4058a 8b4510          mov     eax,dword ptr [rbp+10h]
+00007fff`6cd4058d 8b5518          mov     edx,dword ptr [rbp+18h]
+00007fff`6cd40590 03c2            add     eax,edx
+00007fff`6cd40592 8945fc          mov     dword ptr [rbp-4],eax
+00007fff`6cd40595 90              nop
+00007fff`6cd40596 eb00            jmp     00007fff`6cd40598
+00007fff`6cd40598 8b45fc          mov     eax,dword ptr [rbp-4]
+00007fff`6cd4059b 488d6500        lea     rsp,[rbp]
+00007fff`6cd4059f 5d              pop     rbp
+00007fff`6cd405a0 c3              ret
+0:000> g
+Breakpoint 1 hit
+00007fff`6cd40589 90              nop
+0:000> g
+(304.1088): Break instruction exception - code 80000003 (first chance)
+ntdll!DbgBreakPoint:
+00007fff`e4809920 cc              int     3
+0:008> ~0s
+ntdll!NtReadFile+0x14:
+00007fff`e4806194 c3              ret
+0:000> !clrstack
+OS Thread Id: 0x11ac (0)
+        Child SP               IP Call Site
+0000000000b1ec68 00007fffe4806194 [InlinedCallFrame: 0000000000b1ec68] Microsoft.Win32.Win32Native.ReadFile(Microsoft.Win32.SafeHandles.SafeFileHandle, Byte*, Int32, Int32 ByRef, IntPtr)
+0000000000b1ec68 00007fffcab3a5b4 [InlinedCallFrame: 0000000000b1ec68] Microsoft.Win32.Win32Native.ReadFile(Microsoft.Win32.SafeHandles.SafeFileHandle, Byte*, Int32, Int32 ByRef, IntPtr)
+0000000000b1ec30 00007fffcab3a5b4 DomainNeutralILStubClass.IL_STUB_PInvoke(Microsoft.Win32.SafeHandles.SafeFileHandle, Byte*, Int32, Int32 ByRef, IntPtr)
+0000000000b1ed10 00007fffcb34eb81 System.IO.__ConsoleStream.ReadFileNative(Microsoft.Win32.SafeHandles.SafeFileHandle, Byte[], Int32, Int32, Boolean, Boolean, Int32 ByRef)
+0000000000b1eda0 00007fffcb34ea36 System.IO.__ConsoleStream.Read(Byte[], Int32, Int32)
+0000000000b1ee00 00007fffcab17fec System.IO.StreamReader.ReadBuffer()
+0000000000b1ee50 00007fffcab17d6d System.IO.StreamReader.ReadLine()
+0000000000b1eec0 00007fffcb51931f System.IO.TextReader+SyncTextReader.ReadLine()
+0000000000b1ef20 00007fffcb2e7a77 System.Console.ReadLine()
+0000000000b1ef50 00007fff6cd404b0 Language_Internals.Program.Main()
+0000000000b1f1c0 00007fffcc346a53 [GCFrame: 0000000000b1f1c0] 
+0:000> u 00007fff`6cd40088
+00007fff`6cd40088 e9d3040000      jmp     00007fff`6cd40560
+00007fff`6cd4008d 5f              pop     rdi
+00007fff`6cd4008e 0401            add     al,1
+00007fff`6cd40090 e8bb42605f      call    clr!PrecodeFixupThunk (00007fff`cc344350)
+00007fff`6cd40095 5e              pop     rsi
+00007fff`6cd40096 06              ???
+00007fff`6cd40097 00a859c36cff    add     byte ptr [rax-933CA7h],ch
+00007fff`6cd4009d 7f00            jg      00007fff`6cd4009f
+0:000> u 00007fff`6cd40560
+00007fff`6cd40560 55              push    rbp
+00007fff`6cd40561 4883ec30        sub     rsp,30h
+00007fff`6cd40565 488d6c2430      lea     rbp,[rsp+30h]
+00007fff`6cd4056a 33c0            xor     eax,eax
+00007fff`6cd4056c 8945fc          mov     dword ptr [rbp-4],eax
+00007fff`6cd4056f 894d10          mov     dword ptr [rbp+10h],ecx
+00007fff`6cd40572 895518          mov     dword ptr [rbp+18h],edx
+00007fff`6cd40575 48b86045c36cff7f0000 mov rax,7FFF6CC34560h

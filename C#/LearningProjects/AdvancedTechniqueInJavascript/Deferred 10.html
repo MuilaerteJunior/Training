@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Deferred Processing 10</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="DeferredStyles.css" />
+</head>
+<body>
+    <input id="Load" type="button" value="Load" />
+    <div id="Section1"></div>
+    <div id="Section2"></div>
+    <div id="Section3"></div>
+    <input id="Proceed" type="button" value="Proceed" disabled="true" />
+    <div id="Messages"></div>
+</body>
+<script type="text/javascript">
+    /***************
+        DIFFERENCES BETWEEN USING THIS METHOD INSTEAD OF USING CALLBACK FUNCTIONS:
+            - Callback functions are functions passed as parameter to a method.
+            A callback method can only be called once, there is no way to expand the
+            functionality after it has been executed.
+            - .done,.when methods are registering a handler function with the deferred
+            object. We can attach as many .done methods as we wish.
+    ****************/
+    $(function () {
+        var showMessage = function (options) {
+            if (typeof options !== 'object')
+                options = { message: 'Parameter not an object', error: true };
+
+            options.message = options.message || 'No message specified';
+            options.error = options.error || false;
+
+            $('#Messages')
+                .append(options.error ? 'Error ' : '')
+                .append(options.message)
+                .append('<br />');
+        };
+
+        var loadSection = function (options) {
+            var defer = $.Deferred(),
+                $div,
+                msg;
+
+            if (typeof options !== 'object') {
+                msg = 'Expecting parameter object';
+                showMessage({ message: msg, error: true });
+                return defer.reject({ statusText: msg });
+            }
+
+            options.selector = options.selector || '';
+            options.url = options.url || '';
+            options.dynamic = options.dynamic || false;
+
+            if (options.url === '') {
+                msg = 'Missing URL';
+                showMessage({ message: msg, error: true });
+                return defer.reject({ statusText: 'Missing URL' });
+            }
+
+            $div = $(options.selector);
+            if ($div.length > 0) {
+                $.get(options.url, function () { }, 'html')
+                    .done(
+                        function (result) {
+                            $div.html(result);
+                            if (!options.dynamic) {
+                                defer.resolve();
+                            }
+                        })
+                    .fail(
+                        function (result) {
+                            msg = 'Could not load URL: ' + options.url;
+                            showMessage({ message: msg, error: true });
+                            defer.reject(result);
+                        });
+                if (options.dynamic)
+                    $div
+                        .off('complete,failure')
+                        .on('complete', function (event) {
+                            defer.resolve();
+                        })
+                        .on('failure', function (event, result) {
+                            msg = 'Dynamic content: ' + result.statusText;
+                            showMessage({ message: msg, error: true });
+                            defer.reject(result);
+                        });
+            } else {
+                msg = 'Error in selector';
+                showMessage({ message: msg, error: true });
+                defer.reject({ statusText: msg });
+            }
+
+            return defer.promise();
+        };
+
+        $('#Load').click(function () {
+            $.when(
+                showMessage({message: 'Starting processing' }),
+                loadSection({
+                    selector: '#Section1', url: 'Content1b.html'
+                    , dynamic: true }),
+                loadSection({ selector: '#Section2', url: 'Content2.html' }),
+                loadSection({
+                    selector: '#Section3', url: 'Content3.html'
+                    , dynamic: true
+                }),
+
+                showMessage({message: 'Done processing' })
+            )
+            .promise()//This is to perform an habit for safety
+            .done(function () { })            
+            .fail(function (result)
+            {
+                $('#Messages')
+                    .append('Failure!<br/>')
+                    .append('Result: ' + result.statusText + '<br />');
+            })
+            .always(function () {                
+                $('#Proceed').removeAttr('disabled');
+            });
+        });
+    });
+</script>
+</html>

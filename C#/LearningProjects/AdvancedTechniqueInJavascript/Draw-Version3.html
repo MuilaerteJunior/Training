@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Draw - version 3</title>
+    <style>
+        #theCanvas {
+            background-image: -moz-radial-gradient(30px 30px, #FFF, #EEF);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="theCanvas" width="640" height="480">
+        Attention! Your browser does not support the Canvas
+    </canvas>
+    <script>
+        _KSM = {            
+            draw: function (options) {
+                //Draw something on the canvas
+                var canvas = document.getElementById('theCanvas');
+                if (canvas.getContext) {
+                    //Defining default values for parameters
+                    if (typeof options === 'undefined') options = {};
+                    if (typeof options.left === 'undefined') options.left = 10;
+                    if (typeof options.top === 'undefined') options.top = 10;
+                    if (typeof options.width === 'undefined') options.width = 100;
+                    if (typeof options.height === 'undefined') options.height = 100;
+                    if (typeof options.fill === 'undefined') options.fill = 'silver';
+                    if (typeof options.stroke === 'undefined') options.stroke = 'black';
+                    
+                    var context = canvas.getContext('2d');
+
+                    context.strokeStyle = options.stroke;
+                    context.fillStyle = options.fill;
+                    context.fillRect(options.left, options.top,
+                        options.width, options.height);
+                    context.strokeRect(options.left, options.top,
+                        options.width, options.height);
+                }
+            }
+        };
+
+        _KSM.draw();
+        _KSM.draw({
+            left: 100,
+            top: 100,
+            height: 440,
+            width: 280,
+            stroke: 'burlywood',
+            fill: 'lemonchiffon'
+        });
+    </script>
+</body>
+</html>

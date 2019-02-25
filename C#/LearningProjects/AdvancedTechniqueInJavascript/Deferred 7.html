@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Deferred Processing 7</title>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="DeferredStyles.css" />
+</head>
+<body>
+    <input id="Load" type="button" value="Load" />
+    <div id="Section1"></div>
+    <div id="Section2"></div>
+    <div id="Section3"></div>
+    <input id="Proceed" type="button" value="Proceed" disabled="true" />
+    <div id="Messages"></div>
+</body>
+<script type="text/javascript">
+    /***************
+        DIFFERENCES BETWEEN USING THIS METHOD INSTEAD OF USING CALLBACK FUNCTIONS:
+            - Callback functions are functions passed as parameter to a method. 
+            A callback method can only be called once, there is no way to expand the 
+            functionality after it has been executed.
+            - .done,.when methods are registering a handler function with the deferred
+            object. We can attach as many .done methods as we wish.
+    ****************/
+    $(function () {
+        $('#Load').click(function () {
+            var loadSection = function (options) {
+                if (typeof options !== 'object')
+                    options = {};
+
+                options.selector = options.selector || '';
+                options.url = options.url || '';
+
+                return $.get(options.url, function (result) {
+                    $(options.selector).html(result);
+                }, 'html');
+            };
+            // In cases that we know for sure it will be always successful: 
+            // we should use .when and .then;
+            // Other cases, we should use: .when, .done, . fail!
+            var myDefer = $.when(
+                loadSection({ selector: '#Section1', url: 'Content1.html' }),
+                loadSection({ selector: '#Section2', url: 'Content2.html' }),
+                loadSection({ selector: '#Section3', url: 'Content3.html' })
+            )
+            .promise()//This is to perform an habit for safety
+            .done(function () {
+            })
+            .done(function () {
+                $('#Messages')
+                   .append('Second done handler!<br/>');
+            })
+            .fail(function (result)
+            {
+                $('#Messages')
+                    .append('Failure!<br/>')
+                    .append('Result: ' + result.statusText + '<br />');
+            })
+            .always(function () {
+                $('#Proceed').removeAttr('disabled');
+            });
+
+            myDefer.done(function () {
+                $('#Messages')
+                   .append('Additional done handler called!<br/>');
+            });
+
+        });
+    });
+</script>
+</html>

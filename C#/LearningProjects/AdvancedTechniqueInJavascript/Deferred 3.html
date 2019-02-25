@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Deferred Processing 3</title>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="DeferredStyles.css" />
+</head>
+<body>
+    <input id="Load" type="button" value="Load" />
+    <div id="Section1"></div>
+    <div id="Section2"></div>
+    <div id="Section3"></div>
+    <input id="Proceed" type="button" value="Proceed" disabled="true" />
+    <div id="Messages"></div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        /*
+            This code works but have 2 issues:
+                1 : Multiple indents
+                2 : Remove asynchrnously effects
+        */
+        $('#Load').click(function () {
+            $('#Section1').load('Content1.html', function () {
+                $('#Section2').load('Content2.html', function () {
+                    $('#Section3').load('Content3.html', function () {
+                        $('#Proceed').removeAttr('disabled');
+                    });
+                });
+            });                
+        });
+    });
+</script>
+</html>

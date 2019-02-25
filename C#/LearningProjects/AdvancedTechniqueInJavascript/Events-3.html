@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Events 3</title>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="EventStyles.css" />
+</head>
+<body>
+    <div id="WorkArea" class="clickable">
+        <h5 class="clickable">Work Area</h5>
+        <hr />
+        <input type="button" class="clickable" value="Click me" />
+        <p class="clickable">
+            Click me, too!
+        </p>
+        <p class="clickable">
+            This is ome more text with an embedded
+            <span class="clickable">clickable</span> element.
+        </p>
+    </div>
+    <div id="Messages">
+        <h5>Messages</h5>
+        <hr />
+    </div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var showEventMessage = function (options) {
+            options = $.extend(
+                {
+                    eventType: 'CLICK',
+                    eventTarget: this,
+                    suffix: '<br />'
+                }, options);
+
+            var message = options.eventType + ': ' +
+                         (options.eventTarget.nodeName || 'unknown') + options.suffix;
+
+            $('#Messages').append(message);
+        };
+
+        $('.clickable')
+            .click(function (event) {
+                showEventMessage.call(this, { eventType: event.type });
+
+                if (!event.isPropagationStopped()) {
+                    showEventMessage.call(this, { eventType: event.type, suffix: '#3 <br />' });
+                }
+            })
+            .dblclick(function (event) {
+                showEventMessage.call(this, { eventType: event.type });
+            })
+            .mousedown(function (event) {
+                showEventMessage.call(this, { eventType: event.type });
+                event.stopPropagation();//Stop the event from bubbling up the event processing
+                event.stopImmediatePropagation();//This will avoid the second MouseDown Handler  to be executed
+                event.preventDefault();//= return false, but better for using because of browser support                
+            })
+            .mousedown(function (event) {
+                showEventMessage.call(this, { eventType: event.type , suffix: '#2 <br/>'});
+            });
+    });
+</script>
+</html>

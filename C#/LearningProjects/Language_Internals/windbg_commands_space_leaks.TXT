@@ -1,0 +1,434 @@
+
+Microsoft (R) Windows Debugger Version 10.0.14321.1024 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+Symbol search path is: srv*
+Executable search path is: 
+ModLoad: 00000000`00ff0000 00000000`00ff8000   C:\Desenvolvimento\Projetos\Aprendizado\LearningProjects\Language_Internals\form.exe
+ModLoad: 00007fff`e4760000 00007fff`e4931000   C:\WINDOWS\SYSTEM32\ntdll.dll
+ModLoad: 00007fff`cd760000 00007fff`cd7c6000   C:\WINDOWS\SYSTEM32\MSCOREE.DLL
+ModLoad: 00007fff`e3400000 00007fff`e34ab000   C:\WINDOWS\System32\KERNEL32.dll
+ModLoad: 00007fff`e1a00000 00007fff`e1c1d000   C:\WINDOWS\System32\KERNELBASE.dll
+ModLoad: 00007fff`e3db0000 00007fff`e3e52000   C:\WINDOWS\System32\ADVAPI32.dll
+ModLoad: 00007fff`e4140000 00007fff`e41de000   C:\WINDOWS\System32\msvcrt.dll
+ModLoad: 00007fff`e3250000 00007fff`e32a9000   C:\WINDOWS\System32\sechost.dll
+ModLoad: 00007fff`e32d0000 00007fff`e33f1000   C:\WINDOWS\System32\RPCRT4.dll
+ModLoad: 00007fff`cd4b0000 00007fff`cd54d000   C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll
+ModLoad: 00007fff`e3af0000 00007fff`e3b42000   C:\WINDOWS\System32\SHLWAPI.dll
+ModLoad: 00007fff`e41e0000 00007fff`e44a8000   C:\WINDOWS\System32\combase.dll
+ModLoad: 00007fff`e16b0000 00007fff`e17a5000   C:\WINDOWS\System32\ucrtbase.dll
+ModLoad: 00007fff`e17b0000 00007fff`e181a000   C:\WINDOWS\System32\bcryptPrimitives.dll
+ModLoad: 00007fff`e4710000 00007fff`e4744000   C:\WINDOWS\System32\GDI32.dll
+ModLoad: 00007fff`e1870000 00007fff`e19f2000   C:\WINDOWS\System32\gdi32full.dll
+ModLoad: 00007fff`e3b50000 00007fff`e3cb5000   C:\WINDOWS\System32\USER32.dll
+ModLoad: 00007fff`e14c0000 00007fff`e14de000   C:\WINDOWS\System32\win32u.dll
+ModLoad: 00007fff`e3670000 00007fff`e369e000   C:\WINDOWS\System32\IMM32.DLL
+ModLoad: 00007fff`e0c20000 00007fff`e0c2f000   C:\WINDOWS\System32\kernel.appcore.dll
+ModLoad: 00007fff`df0e0000 00007fff`df0ea000   C:\WINDOWS\SYSTEM32\VERSION.dll
+ModLoad: 00007fff`cc340000 00007fff`ccd26000   C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+ModLoad: 00007fff`cc100000 00007fff`cc1f7000   C:\WINDOWS\SYSTEM32\MSVCR120_CLR0400.dll
+ModLoad: 00007fff`ca5f0000 00007fff`cbad8000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\mscorlib\e96b4590c579d08edc2e60cc3e5ae997\mscorlib.ni.dll
+ModLoad: 00007fff`e4000000 00007fff`e4137000   C:\WINDOWS\System32\ole32.dll
+ModLoad: 00007fff`c1f60000 00007fff`c206e000   C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clrjit.dll
+ModLoad: 00007fff`e34b0000 00007fff`e356f000   C:\WINDOWS\System32\OLEAUT32.dll
+ModLoad: 00007fff`e1370000 00007fff`e140c000   C:\WINDOWS\System32\msvcp_win.dll
+ModLoad: 00007fff`c99a0000 00007fff`ca5e4000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System\ee1c3ea3e0049df6d53b35e21c2247e4\System.ni.dll
+ModLoad: 00007fff`ac6c0000 00007fff`ac8ab000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Drawing\3ac58fb7cb8d849d0f85f2435e1a0066\System.Drawing.ni.dll
+ModLoad: 00007fff`a43e0000 00007fff`a52d1000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Windows.Forms\04e26b57f0c211fdb0d877810b37497f\System.Windows.Forms.ni.dll
+ModLoad: 00007fff`de940000 00007fff`de9d5000   C:\WINDOWS\system32\uxtheme.dll
+ModLoad: 00007fff`dca30000 00007fff`dcadc000   C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.14393.447_none_0d5aa7fbb6d35646\comctl32.dll
+ModLoad: 00007fff`c9010000 00007fff`c9992000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Core\46ebe2b057622677cfc3fd04f47081c0\System.Core.ni.dll
+ModLoad: 00007fff`c0c20000 00007fff`c0d42000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Configuration\a7f47973b917fdac945dd35f56b99eaf\System.Configuration.ni.dll
+ModLoad: 00007fff`c0350000 00007fff`c0bf6000   C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Xml\42142f2f161821b78f345ecf759fa095\System.Xml.ni.dll
+ModLoad: 00007fff`dc9f0000 00007fff`dca16000   C:\WINDOWS\system32\dwmapi.dll
+ModLoad: 00007fff`e4670000 00007fff`e470f000   C:\WINDOWS\System32\clbcatq.dll
+ModLoad: 00007fff`e4510000 00007fff`e466b000   C:\WINDOWS\System32\MSCTF.dll
+ModLoad: 00007fff`dcae0000 00007fff`dcc7a000   C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.14393.321_none_72fe05dd211a5fae\gdiplus.dll
+(43dc.3f6c): Break instruction exception - code 80000003 (first chance)
+ntdll!DbgBreakPoint:
+00007fff`e4809920 cc              int     3
+0:009> !dumpheap -stat
+No export dumpheap found
+0:009> .loadby sos clr
+0:009> !dumpheap -stat
+c0000005 Exception in C:\Windows\Microsoft.NET\Framework64\v4.0.30319\sos.dumpheap debugger extension.
+      PC: 00007fff`a3d378d1  VA: 00000000`00000000  R/W: 0  Parameter: 00000000`00000000
+0:009> !dumpheap -stat
+Statistics:
+              MT    Count    TotalSize Class Name
+00007fffcacba788        1           24 System.AppDomainPauseManager
+00007fffcac8a4d8        1           24 System.Threading.Tasks.ThreadPoolTaskScheduler
+00007fffcac7a0c8        1           24 System.Collections.Hashtable+ValueCollection
+00007fffcac76090        1           24 System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]]
+00007fffcac75fc0        1           24 System.Collections.Generic.GenericEqualityComparer`1[[System.Int32, mscorlib]]
+00007fffcac6b1d0        1           24 System.DefaultBinder
+00007fffcac6a1a8        1           24 System.Reflection.Missing
+00007fffcac6a060        1           24 System.__Filters
+00007fffcac690a0        1           24 System.Reflection.__Filters
+00007fffcac68978        1           24 System.Collections.Generic.ObjectEqualityComparer`1[[System.RuntimeType, mscorlib]]
+00007fffcac674a8        1           24 System.Collections.Generic.ObjectEqualityComparer`1[[System.Type, mscorlib]]
+00007fffcac62568        1           24 System.Threading.Tasks.Task+<>c
+00007fffcac555e0        1           24 System.Text.DecoderExceptionFallback
+00007fffcac55568        1           24 System.Text.EncoderExceptionFallback
+00007fffcac54268        1           24 System.EventArgs
+00007fffcac52728        1           24 System.Threading.SynchronizationContext
+00007fffcac4fc70        1           24 System.Collections.Generic.ObjectEqualityComparer`1[[System.Object, mscorlib]]
+00007fffcac4eda0        1           24 System.Nullable`1[[System.Boolean, mscorlib]]
+00007fffcac47840        1           24 System.Threading.ThreadPoolWorkQueue+SparseArray`1[[System.Threading.ThreadPoolWorkQueue+WorkStealingQueue, mscorlib]]
+00007fffcac435d8        1           24 System.Collections.Generic.ObjectEqualityComparer`1[[System.IntPtr, mscorlib]]
+00007fffcac433f0        1           24 System.Collections.Generic.GenericEqualityComparer`1[[System.Int16, mscorlib]]
+00007fffcac424b8        1           24 System.Boolean
+00007fffc0c7e520        1           24 System.Configuration.ConfigurationPermission
+00007fffc0c7e440        1           24 System.Configuration.BaseConfigurationRecord+IndirectLocationInputComparer
+00007fffc0c7e3a8        1           24 System.Configuration.ConfigurationValues+EmptyCollection+EmptyCollectionEnumerator
+00007fffc0c7e328        1           24 System.Configuration.ConfigurationValues+EmptyCollection
+00007fffc0c7dca0        1           24 System.Configuration.SimpleBitVector32
+00007fffc0c7db98        1           24 System.Configuration.ConfigurationElementProperty
+00007fffc0c7d9f0        1           24 System.Configuration.ConfigurationPropertyCollection
+00007fffc0c7d100        1           24 System.Configuration.Internal.InternalConfigHost
+00007fffc0575b50        1           24 System.Xml.XmlCharType
+00007fffac750318        1           24 System.Drawing.SizeF
+00007fffac74fae8        1           24 System.Drawing.Point
+00007fffa50dad50        1           24 System.Windows.Forms.KeyEventArgs
+00007fffa476a1f8        1           24 System.Windows.Forms.Screen+MonitorEnumCallback
+00007fffa47699e8        1           24 System.Windows.Forms.FormCollection
+00007fffa47693b0        1           24 System.Windows.Forms.Layout.ArrangedElementCollection
+00007fffa4769248        1           24 System.Windows.Forms.Layout.DefaultLayout
+00007fffcacbc360        1           32 Microsoft.Win32.SafeHandles.SafeFileMappingHandle
+00007fffcacbc2d0        1           32 Microsoft.Win32.SafeHandles.SafeViewOfFileHandle
+00007fffcac78400        1           32 Microsoft.Win32.SafeHandles.SafeWaitHandle
+00007fffcac755c0        1           32 Microsoft.Win32.SafeHandles.SafeFileHandle
+00007fffcac6ce70        1           32 System.Runtime.Versioning.BinaryCompatibility+BinaryCompatibilityMap
+00007fffcac6bc80        1           32 System.Diagnostics.Tracing.ActivityTracker
+00007fffcac67188        1           32 System.Security.Policy.AssemblyEvidenceFactory
+00007fffcac67040        1           32 Microsoft.Win32.SafeHandles.SafePEFileHandle
+00007fffcac5b320        1           32 System.__ComObject
+00007fffc9d885d8        1           32 Microsoft.Win32.NativeMethods+USEROBJECTFLAGS
+00007fffc0c7ede0        1           32 System.Configuration.RuntimeConfigurationRecord+RuntimeConfigurationFactory
+00007fffc0c7eb38        1           32 System.Configuration.Internal.ConfigSystem
+00007fffc0c7dbf8        1           32 System.Configuration.StringValidator
+00007fffa476a180        1           32 System.Windows.Forms.Screen[]
+00007fffa4769e20        1           32 System.Windows.Forms.Application+ComponentManager+ComponentHashtableEntry
+00007fffa4769cf0        1           32 System.Windows.Forms.NativeMethods+MSOCRINFOSTRUCT
+00007fffa4769870        1           32 System.Windows.Forms.InvalidateEventArgs
+00007fffa4769200        1           32 System.Windows.Forms.LayoutEventArgs
+00007fffa47685b0        1           32 System.Windows.Forms.ClientUtils+WeakRefCollection
+00007fff6cc35ab8        1           32 Language_Internals.Program+<>c__DisplayClass0_0
+00007fffcacbc558        1           40 Microsoft.Win32.Win32Native+InputRecord
+00007fffcacbc1c8        1           40 System.Text.InternalEncoderBestFitFallback
+00007fffcacbbce0        1           40 System.IO.Stream+NullStream
+00007fffcac7a3f0        1           40 System.Threading.ThreadHelper
+00007fffcac5af38        1           40 System.Threading.Tasks.TaskFactory
+00007fffcac475a0        1           40 System.Threading.ThreadPoolWorkQueue+QueueSegment
+00007fffcac47530        1           40 System.Threading.ThreadPoolWorkQueue
+00007fffc9d87dc8        1           40 Microsoft.Win32.SystemEvents
+00007fffac74d878        1           40 System.Drawing.Color
+00007fffa475f1c8        1           40 System.Windows.Forms.ApplicationContext
+00007fffa474d1a8        1           40 System.Windows.Forms.NativeMethods+TRACKMOUSEEVENT
+00007fffa4767808        1           44 System.Windows.Forms.PropertyStore+IntegerEntry[]
+00007fffcacca528        1           48 System.Runtime.CompilerServices.ConditionalWeakTable`2[[System.Threading.Tasks.TaskScheduler, mscorlib],[System.Object, mscorlib]]
+00007fffcacbcad0        1           48 System.Text.EncoderNLS
+00007fffcacbc7b8        1           48 System.IO.TextWriter+SyncTextWriter
+00007fffcacbc258        1           48 System.Text.InternalDecoderBestFitFallback
+00007fffcac77a08        2           48 System.DateTime
+00007fffcac71db0        1           48 System.SharedStatics
+00007fffcac6e808        2           48 System.OrdinalComparer
+00007fffcac6a6c8        1           48 System.RuntimeType+ActivatorCacheEntry
+00007fffcac6a5f0        1           48 System.RuntimeType+ActivatorCache
+00007fffcac69ac8        1           48 System.OperatingSystem
+00007fffcac50aa0        1           48 System.Threading.ManualResetEvent
+00007fffc0c7dfb0        2           48 System.Configuration.OverrideModeSetting
+00007fffc0c7db08        2           48 System.Configuration.DefaultValidator
+00007fffa476aed0        1           48 System.Windows.Forms.Cursor
+00007fffa4769be8        1           48 System.Windows.Forms.Application+ComponentManager
+00007fffa47660e0        2           48 System.Windows.Forms.PropertyStore+SizeWrapper
+00007fffa4765fd0        1           48 System.Windows.Forms.AnchorStyles[]
+00007fffcacbc5d8        1           56 System.IO.__ConsoleStream
+00007fffcac77d70        1           56 System.Collections.Queue
+00007fffcac75058        1           56 System.Text.UnicodeEncoding
+00007fffcac6e8d8        1           56 System.Globalization.CodePageDataItem
+00007fffcac5ce18        1           56 System.Security.PermissionTokenFactory
+00007fffc0c7c6b8        1           56 System.Configuration.ClientConfigurationHost
+00007fffa4769160        1           56 System.Windows.Forms.VScrollProperties
+00007fffa47690c0        1           56 System.Windows.Forms.HScrollProperties
+00007fffcac79ed0        1           64 System.Globalization.CompareInfo
+00007fffcac75460        2           64 System.Text.DecoderReplacementFallback
+00007fffcac753d0        2           64 System.Text.EncoderReplacementFallback
+00007fffcac670e8        1           64 System.Security.Policy.PEFileEvidenceFactory
+00007fffcac63138        1           64 System.Predicate`1[[System.Object, mscorlib]]
+00007fffcac630a8        1           64 System.Predicate`1[[System.Threading.Tasks.Task, mscorlib]]
+00007fffcac63010        1           64 System.Func`1[[System.Threading.Tasks.Task+ContingentProperties, mscorlib]]
+00007fffcac62ed0        1           64 System.Action`1[[System.Object, mscorlib]]
+00007fffcac58838        1           64 System.Action
+00007fffcac52228        2           64 System.CultureAwareComparer
+00007fffca5ff250        1           64 System.EventHandler`1[[Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs, mscorlib]]
+00007fffc9d88848        1           64 Microsoft.Win32.NativeMethods+WndProc
+00007fffc9d88648        1           64 Microsoft.Win32.NativeMethods+ConHndlr
+00007fffc9d85d70        1           64 Microsoft.Win32.UserPreferenceChangedEventHandler
+00007fffc9d83e80        2           64 System.ComponentModel.EventHandlerList
+00007fffc0c7ea90        1           64 System.Configuration.Internal.InternalConfigEventHandler
+00007fffac74fc50        2           64 System.Drawing.Rectangle
+00007fffa476a338        1           64 System.Windows.Forms.NativeMethods+MONITORINFOEX
+00007fffa476a290        1           64 System.Windows.Forms.NativeMethods+MonitorEnumProc
+00007fffa4769a90        1           64 System.Windows.Forms.MethodInvoker
+00007fffa47656f0        2           64 System.Windows.Forms.PropertyStore
+00007fffcac72c60        1           72 System.Security.Policy.Evidence
+00007fffcac56688        3           72 System.Security.Permissions.UIPermission
+00007fffcac55dc0        1           72 System.Threading.Tasks.Task
+00007fffcac51618        3           72 System.Security.Permissions.SecurityPermission
+00007fffcac4fcf8        1           72 System.Runtime.Remoting.Messaging.LogicalCallContext
+00007fffc0c7cf98        1           72 System.Configuration.Internal.InternalConfigRoot
+00007fffc0c7c5f8        1           72 System.Configuration.ClientConfigurationSystem
+00007fffa476a6d8        1           72 System.Windows.Forms.NativeMethods+MSG[]
+00007fffa4769eb0        3           72 System.Windows.Forms.InputLanguage
+00007fffcac53eb0        2           80 System.Collections.Stack
+00007fffcac47760        2           80 System.Threading.ThreadPoolWorkQueueThreadLocals
+00007fffcac43010        1           80 System.Collections.Generic.Dictionary`2[[System.IntPtr, mscorlib],[System.Int16, mscorlib]]
+00007fffcac42d48        1           80 System.Collections.Generic.Dictionary`2[[System.Int16, mscorlib],[System.IntPtr, mscorlib]]
+00007fffca6009e0        1           80 System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Globalization.CultureData, mscorlib]]
+00007fffca600030        1           80 System.Collections.Generic.Dictionary`2[[System.RuntimeType, mscorlib],[System.RuntimeType, mscorlib]]
+00007fffca5ffee8        1           80 System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[System.Security.Policy.EvidenceTypeDescriptor, mscorlib]]
+00007fffca5fdfd0        1           80 System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Threading.Tasks.Task, mscorlib]]
+00007fffca5fd7c0        1           80 System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.AppContext+SwitchValueState, mscorlib]]
+00007fffca5fb6e8        1           80 System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object[], mscorlib]]
+00007fffc9dd64f0        2           80 System.Collections.Specialized.HybridDictionary
+00007fffc9dd14b8        2           80 System.Collections.Specialized.ListDictionary+DictionaryNode
+00007fffc9d851f8        2           80 System.ComponentModel.EventHandlerList+ListEntry
+00007fffc99b3860        1           80 System.Collections.Generic.Dictionary`2[[System.Object, mscorlib],[System.Collections.Generic.List`1[[Microsoft.Win32.SystemEvents+SystemEventInvokeInfo, System]], mscorlib]]
+00007fffa476a100        1           80 System.Windows.Forms.Screen
+00007fffa4766e58        1           80 System.Windows.Forms.NativeWindow+WindowClass
+00007fffa47662a0        2           80 System.Windows.Forms.WindowsFormsSynchronizationContext
+00007fffa4765f10        2           80 System.Windows.Forms.Padding
+00007fffcac50578        1           88 System.Security.FrameSecurityDescriptor
+00007fffc9d88738        1           88 Microsoft.Win32.NativeMethods+WNDCLASS
+00007fffc9d886d8        1           88 Microsoft.Win32.NativeMethods+WNDCLASS_I
+00007fffc0c7e2b8        1           88 System.Configuration.ConfigurationValues
+00007fffcac76ee0        2           96 System.Text.UTF8Encoding
+00007fffcac76268        1           96 System.Collections.Generic.Dictionary`2+Entry[[System.String, mscorlib],[System.Globalization.CultureData, mscorlib]][]
+00007fffcac75ba8        3           96 System.Version
+00007fffcac6c678        1           96 System.Globalization.TextInfo
+00007fffcac69438        4           96 System.UInt16
+00007fffcac5cc90        3           96 System.Security.PermissionToken
+00007fffcac477e0        2           96 System.Threading.ThreadPoolWorkQueue+WorkStealingQueue
+00007fffc9dd6270        2           96 System.Collections.Specialized.ListDictionary
+00007fffc9d88e48        1           96 System.Collections.Generic.Dictionary`2+Entry[[System.Object, mscorlib],[System.Collections.Generic.List`1[[Microsoft.Win32.SystemEvents+SystemEventInvokeInfo, System]], mscorlib]][]
+00007fffc0c7de40        2           96 System.Configuration.Internal.FileVersion
+00007fffc0c7c598        1           96 System.Configuration.ClientConfigPaths
+00007fffa4768038        2           96 System.Windows.Forms.Internal.WindowsGraphics
+00007fffa474f3b8        4           96 System.Windows.Forms.NativeMethods+POINT
+00007fffc0c7d890        1          104 System.Configuration.ConfigurationProperty
+00007fffac74d678        1          104 System.Internal.HandleCollector+HandleType[]
+00007fffa4769b38        1          104 System.Windows.Forms.Control+ThreadMethodEntry
+00007fffcac76958        1          112 System.IO.StreamWriter
+00007fffcac6bba8        2          112 System.Diagnostics.Tracing.EtwSession[]
+00007fffcac6ab90        2          112 System.RuntimeType+RuntimeTypeCache+MemberInfoCache`1[[System.Reflection.RuntimeConstructorInfo, mscorlib]]
+00007fffcac5cd40        2          112 System.Security.Util.TokenBasedSet
+00007fffc0c7ddb0        2          112 System.Configuration.StreamInfo
+00007fffa4768750        2          112 System.Windows.Forms.Internal.DeviceContext+GraphicsState
+00007fffca600358        3          120 System.Collections.Generic.List`1[[System.WeakReference, mscorlib]]
+00007fffc99b3558        3          120 System.Collections.Generic.List`1[[Microsoft.Win32.SystemEvents+SystemEventInvokeInfo, System]]
+00007fffac74da38        5          120 System.Drawing.Size
+00007fffa4769760        1          120 System.Windows.Forms.NativeMethods+STARTUPINFO_I
+00007fffa47418b8        1          120 System.Windows.Forms.WindowsFormsSection
+00007fffcacbbfc8        1          128 System.Text.SBCSCodePageEncoding
+00007fffcac77350        4          128 System.Guid
+00007fffcac72df8        2          128 System.Security.PermissionSet
+00007fffcac725d0        1          128 System.AppDomainSetup
+00007fffcac6bec0        2          128 Microsoft.Win32.UnsafeNativeMethods+ManifestEtw+EtwEnableCallback
+00007fffcac69140        2          128 System.Reflection.TypeFilter
+00007fffcac67f60        2          128 System.Threading.ReaderWriterLock
+00007fffcac67530        2          128 System.Type[]
+00007fffcac520e8        2          128 System.Threading.ThreadStart
+00007fffcac50f38        4          128 System.Random
+00007fffc9d86868        2          128 Microsoft.Win32.UserPreferenceChangingEventHandler
+00007fffc05758d8        1          128 System.Xml.XmlTextReaderImpl+NodeData
+00007fffa476a490        2          128 System.Windows.Forms.Internal.WindowsSolidBrush
+00007fffa47686d0        4          128 System.Windows.Forms.ClientUtils+WeakRefCollection+WeakRefObject
+00007fffcacca5d8        1          136 System.Runtime.CompilerServices.ConditionalWeakTable`2+Entry[[System.Threading.Tasks.TaskScheduler, mscorlib],[System.Object, mscorlib]][]
+00007fffc0c7e248        1          144 System.Configuration.SectionInformation
+00007fffac74e840        2          144 System.Drawing.Icon
+00007fffcac6a650        1          152 System.RuntimeType+ActivatorCacheEntry[]
+00007fffcac69e30        4          152 System.WeakReference[]
+00007fffcac478b0        1          152 System.Threading.ThreadPoolWorkQueue+WorkStealingQueue[]
+00007fffcac75d50        1          160 System.Globalization.CalendarData
+00007fffcac71bc0        1          160 System.ExecutionEngineException
+00007fffcac71b48        1          160 System.StackOverflowException
+00007fffcac71ad0        1          160 System.OutOfMemoryException
+00007fffcac718e8        1          160 System.Exception
+00007fffcac5ce78        1          160 System.Security.PermissionToken[]
+00007fffc9dd4960        2          160 System.Diagnostics.TraceSwitch
+00007fffc9d888f0        5          160 Microsoft.Win32.SystemEvents+SystemEventInvokeInfo
+00007fffc99b8448        2          160 System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.UriParser, System]]
+00007fffa47669a0        1          160 System.Windows.Forms.Application+MarshalingControl
+00007fffa4766220        2          160 System.Windows.Forms.CreateParams
+00007fffcac6adb8        2          168 System.Reflection.RuntimeConstructorInfo[]
+00007fffcac6bd48        2          176 System.Diagnostics.Tracing.EventSource+OverideEventProvider
+00007fffcac69808        2          176 System.Collections.Hashtable+SyncHashtable
+00007fffa4766908        1          184 System.Internal.HandleCollector+HandleType[]
+00007fffcac784a8        1          192 System.Diagnostics.Tracing.FrameworkEventSource
+00007fffcac6a118        3          192 System.Reflection.MemberFilter
+00007fffcac625d8        1          192 System.Threading.Tasks.TplEtwProvider
+00007fffcac5d7e8        1          192 System.Collections.Generic.Dictionary`2+Entry[[System.String, mscorlib],[System.AppContext+SwitchValueState, mscorlib]][]
+00007fffcac509e8        3          192 System.Threading.ContextCallback
+00007fffc9d88578        4          192 Microsoft.Win32.SystemEvents+SystemEventInvokeInfo[]
+00007fffac74d9d8        8          192 System.Drawing.KnownColor
+00007fffa47697f0        8          192 System.Windows.Forms.Control+MultithreadSafeCallScope
+00007fffa4766fc8        3          192 System.Windows.Forms.NativeMethods+WndProc
+00007fffc0c7d6e8        5          200 System.Configuration.ConfigurationSchemaErrors
+00007fffcac75cd8        1          208 System.Globalization.CalendarData[]
+00007fffcac69208        2          208 System.IO.UnmanagedMemoryStream
+00007fffcac73e98        9          216 System.Int32
+00007fffcac71e70        1          216 System.AppDomain
+00007fffa4769f18        4          216 System.Windows.Forms.ImeMode[]
+00007fffa47657b8        2          224 System.Windows.Forms.Control+ControlNativeWindow
+00007fffcac6b030        7          232 System.Reflection.ParameterInfo[]
+00007fffcac68340        7          232 System.RuntimeType[]
+00007fffa4766380        1          232 System.Windows.Forms.Application+ThreadContext
+00007fffa4766140        3          232 System.Windows.Forms.PropertyStore+ObjectEntry[]
+00007fffcac770d0        6          240 System.Collections.ArrayList
+00007fffcac757f0        2          256 System.Globalization.CultureInfo
+00007fffcac68b28        4          256 System.Reflection.RuntimeModule
+00007fffcac5d3c0        8          256 Microsoft.Win32.SafeHandles.SafeRegistryHandle
+00007fffcac5b290        8          256 System.Runtime.InteropServices.HandleRef
+00007fffa476a040        4          256 System.Windows.Forms.PaintEventArgs
+00007fffa4768278        2          272 System.Windows.Forms.Internal.DeviceContext
+00007fffcac74a98        5          280 System.Reflection.RuntimeAssembly
+00007fffcac72bb0        3          288 System.Threading.Thread
+00007fffcac6ceb8        9          288 Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+00007fffcac68840        1          288 System.Collections.Generic.Dictionary`2+Entry[[System.RuntimeType, mscorlib],[System.RuntimeType, mscorlib]][]
+00007fffcac71c38        2          320 System.Threading.ThreadAbortException
+00007fffc0c7d790        5          320 System.Configuration.BaseConfigurationRecord+ConfigRecordStreamInfo
+00007fffcac777c8       14          336 System.WeakReference
+00007fffcac78790        4          352 System.Threading.ExecutionContext
+00007fffcac5d010        7          392 Microsoft.Win32.RegistryKey
+00007fffac750720       10          400 System.Internal.HandleCollector+HandleType
+00007fffcac764b0        2          432 System.Globalization.NumberFormatInfo
+00007fffcac67e28        1          432 System.Collections.Generic.Dictionary`2+Entry[[System.Type, mscorlib],[System.Security.Policy.EvidenceTypeDescriptor, mscorlib]][]
+00007fffa4761978        1          448 System.Windows.Forms.Form
+00007fffcac69ba8        3          480 System.RuntimeType+RuntimeTypeCache
+00007fffcac6ae30        7          560 System.Signature
+00007fffa47668a8       14          560 System.Internal.HandleCollector+HandleType
+00007fffcac75dc0       12          576 System.Text.StringBuilder
+00007fffc9dd4338       16          640 System.UriParser+BuiltInUriParser
+00007fffc0c7ebe8        5          720 System.Configuration.RuntimeConfigurationRecord
+00007fffc0c7d3d8       13          832 System.Configuration.SectionInput
+00007fffa4765d68        1          912 System.Windows.Forms.NativeWindow+HandleBucket[]
+00007fffcac6aeb0        8          960 System.Reflection.RuntimeParameterInfo
+00007fffcac75b50        2         1072 System.Globalization.CultureData
+00007fffc0c7e1e8       15         1080 System.Configuration.SectionRecord
+00007fffc9d83c78       51         1224 System.Collections.Specialized.BitVector32+Section
+00007fffcac75668       16         1280 System.Collections.Hashtable
+00007fffcac72aa8       20         1376 System.String[]
+00007fffc9dd42b0        2         1440 System.Collections.Generic.Dictionary`2+Entry[[System.String, mscorlib],[System.UriParser, System]][]
+00007fffcac77920       24         1536 System.EventHandler
+00007fffc0c7e150       13         1560 System.Configuration.SectionXmlInfo
+00007fffcac6a818       15         1680 System.Reflection.RuntimeConstructorInfo
+00007fffcac72860       40         2596 System.Char[]
+00007fffcac47600        3         2632 System.Threading.IThreadPoolWorkItem[]
+00007fffcac73e30       24         3424 System.Int32[]
+00007fffcac71c98      144         3456 System.Object
+00007fffa476ae18       95         3800 System.Windows.Forms.MouseEventArgs
+00007fffcac73698       97         5432 System.RuntimeType
+00007fffcac75710       16         7200 System.Collections.Hashtable+bucket[]
+00007fffcac6a2b8      132         7392 System.Collections.Hashtable+HashtableEnumerator
+00007fffc0c7e010      114        11856 System.Configuration.FactoryRecord
+00007fffcac71d30       26        69744 System.Object[]
+00007fffcac716b8      882        77330 System.String
+0000000001529ae0      192        81460      Free
+00007fffcac693d0        7     67124906 System.Byte[]
+Total 2473 objects
+0:009> !dumpheap -type byte
+         Address               MT     Size
+
+Statistics:
+              MT    Count    TotalSize Class Name
+Total 0 objects
+0:009> !dumpheap -type byte[]
+         Address               MT     Size
+
+Statistics:
+              MT    Count    TotalSize Class Name
+Total 0 objects
+0:009> !dumpheap -type Byte[]
+         Address               MT     Size
+00000000032f2d38 00007fffcac693d0       64     
+00000000032f39b8 00007fffcac693d0       75     
+00000000032f6ac8 00007fffcac693d0      281     
+00000000032fbb30 00007fffcac693d0    10158     
+00000000032fe720 00007fffcac693d0     4288     
+00000000032ff828 00007fffcac693d0     1152     
+00000000132d1960 00007fffcac693d0 67108888     
+
+Statistics:
+              MT    Count    TotalSize Class Name
+00007fffcac693d0        7     67124906 System.Byte[]
+Total 7 objects
+0:009> !do 00000000132d1960
+Name:        System.Byte[]
+MethodTable: 00007fffcac693d0
+EEClass:     00007fffca6a4dc8
+Size:        67108888(0x4000018) bytes
+Array:       Rank 1, Number of elements 67108864, Type Byte (Print Array)
+Content:     _zWf...p..C)....Q....,......g9J4Q...3.."s....'UR.EG.L..2.K.........55..V0...O.d....".[...y<.m.F...4.O ......-.....3....4'4l....@
+Fields:
+None
+0:009> !gcroot 00000000132d1960
+Thread 31c:
+    000000000133ea60 00007fffa46410da System.Windows.Forms.Application+ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr, Int32, Int32)
+        rbx: 
+            ->  00000000032c5b88 System.Windows.Forms.Application+ThreadContext
+            ->  00000000032f3b30 System.Windows.Forms.ApplicationContext
+            ->  00000000032c36d8 System.Windows.Forms.Form
+            ->  00000000032f0f90 System.ComponentModel.EventHandlerList
+            ->  00000000032f3b98 System.ComponentModel.EventHandlerList+ListEntry
+            ->  00000000032f0fb0 System.ComponentModel.EventHandlerList+ListEntry
+            ->  00000000032f0f50 System.EventHandler
+            ->  00000000032c36b8 Language_Internals.Program+<>c__DisplayClass0_0
+            ->  00000000132d1960 System.Byte[]
+
+Found 1 unique roots (run '!GCRoot -all' to see all roots).
+0:009> !do 00000000032f0f50 
+Name:        System.EventHandler
+MethodTable: 00007fffcac77920
+EEClass:     00007fffca5f4f78
+Size:        64(0x40) bytes
+File:        C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll
+Fields:
+              MT    Field   Offset                 Type VT     Attr            Value Name
+00007fffcac71c98  40002b5        8        System.Object  0 instance 00000000032c36b8 _target
+00007fffcac71c98  40002b6       10        System.Object  0 instance 0000000000000000 _methodBase
+00007fffcac79b10  40002b7       18        System.IntPtr  1 instance     7fff6cd400a8 _methodPtr
+00007fffcac79b10  40002b8       20        System.IntPtr  1 instance                0 _methodPtrAux
+00007fffcac71c98  40002c2       28        System.Object  0 instance 0000000000000000 _invocationList
+00007fffcac79b10  40002c3       30        System.IntPtr  1 instance                0 _invocationCount
+0:009> !do 00000000032c36b8
+Name:        Language_Internals.Program+<>c__DisplayClass0_0
+MethodTable: 00007fff6cc35ab8
+EEClass:     00007fff6cd81020
+Size:        32(0x20) bytes
+File:        C:\Desenvolvimento\Projetos\Aprendizado\LearningProjects\Language_Internals\form.exe
+Fields:
+              MT    Field   Offset                 Type VT     Attr            Value Name
+00007fffcac72aa8  4000001        8      System.String[]  0 instance 00000000032c3640 args
+00007fffcac693d0  4000002       10        System.Byte[]  0 instance 00000000132d1960 b
+0:009> !dumpmt -md 00007fff6cc35ab8
+EEClass:         00007fff6cd81020
+Module:          00007fff6cc340e0
+Name:            Language_Internals.Program+c__DisplayClass0_0
+mdToken:         0000000002000003
+File:            C:\Desenvolvimento\Projetos\Aprendizado\LearningProjects\Language_Internals\form.exe
+BaseSize:        0x20
+ComponentSize:   0x0
+Slots in VTable: 7
+Number of IFaces in IFaceMap: 0
+--------------------------------------
+MethodDesc Table
+           Entry       MethodDesc    JIT Name
+00007fffcaa56550 00007fffca5f8648 PreJIT System.Object.ToString()
+00007fffcaa76d50 00007fffca5f8650 PreJIT System.Object.Equals(System.Object)
+00007fffcaa626c0 00007fffca5f8678 PreJIT System.Object.GetHashCode()
+00007fffcaa84430 00007fffca5f8690 PreJIT System.Object.Finalize()
+00007fff6cd405f0 00007fff6cc35a78    JIT Language_Internals.Program+c__DisplayClass0_0..ctor()
+00007fff6cd406d0 00007fff6cc35a80    JIT Language_Internals.Program+c__DisplayClass0_0.b__0(System.Object, System.EventArgs)
+00007fff6cd40640 00007fff6cc35a90    JIT Language_Internals.Program+c__DisplayClass0_0.b__1()

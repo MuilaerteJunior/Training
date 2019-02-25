@@ -1,0 +1,10 @@
+.loadby sos clr
+
+!dumpheap -stat
+
+!dumpheap -type Byte[]
+
+!do 00000000132d1960 (memory address)
+
+!gcroot 00000000132d1960
+

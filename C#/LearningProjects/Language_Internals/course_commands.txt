@@ -1,0 +1,20 @@
+/*****************************************************************
+
+FERRAMENTAS USADAS DURANTE O CURSO
+
+*****************************************************************/
+- ildasm
+- ilspy
+- windbg
+- dumpbin
+- csc (compilador c#)
+
+/********************************************************************
+Comandos interessantes
+********************************************************************/
+copy SOURCE_FILE TARGET_FILE
+copy con TARGET_FILE (cria um arquivo a partir do console)
+
+
+/******** DUMPBIN ********/
+DUMPBIN /all FILE_NAME
