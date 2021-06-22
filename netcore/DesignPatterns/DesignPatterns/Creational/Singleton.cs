@@ -1,4 +1,3 @@
-using DesignPatterns.Models;
 
 namespace DesignPatterns.Creational
 {
