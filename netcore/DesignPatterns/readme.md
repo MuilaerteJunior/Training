@@ -11,5 +11,6 @@
         5. Using a simple field with an object reference and using lock for verifying if is null or not
             This approach fails while trying to acess the main object
 
-
+* ## Behavioral
+    ### Strategy
 
