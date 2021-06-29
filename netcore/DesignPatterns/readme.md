@@ -13,4 +13,7 @@
 
 * ## Behavioral
     ### Strategy
+        Just a simple approach using the strategy Design Pattern
+    ### Observer
+        A Observer design pattern approach that uses typed interfaces for helping use specific objects for subscriber and publisher.
 
