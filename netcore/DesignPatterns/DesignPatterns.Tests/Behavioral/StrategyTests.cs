@@ -9,9 +9,12 @@ using System.Reflection;
 using System.Collections.Generic;
 using DesignPatterns.Behavioral;
 using Moq;
+using DesignPatterns.Behavioral.Strategy;
 
 namespace DesignPatterns.Tests.Creational
 {
+
+
     public class StrategyTests
     {
         [Fact( DisplayName = "Validating if main class are able to apply as 'Strategist'")]
