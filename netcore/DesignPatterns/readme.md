@@ -16,4 +16,6 @@
         Just a simple approach using the strategy Design Pattern
     ### Observer
         A Observer design pattern approach that uses typed interfaces for helping use specific objects for subscriber and publisher.
+    ### Decorator
+        Decorator design pattern applied conceptually to a "drink" environment, as how to decorate and apply open-closed principle, open for extensions and closed for modifications.
 
