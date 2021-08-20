@@ -23,9 +23,10 @@
     ### Decorator
         Decorator design pattern applied conceptually to a "drink" environment, as how to decorate and apply open-closed principle, open for extensions and closed for modifications.
 
-    ### Adapter
-        
+    ### Adapter        
 
     ### Facade
+
+    ### Iterator
         
 
