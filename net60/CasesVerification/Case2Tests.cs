@@ -99,17 +99,44 @@ public class Case2Tests
 
 
 
-    [Theory(DisplayName = "Validating difference between two decimals, and rounding it")]
-    [InlineData(15.00, 15.0000000000000000000000000000001)]
-    [InlineData(80.00, 80.0000000000000000000000004565411)]
-    [InlineData(0.00, 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)]
-    [InlineData(5000000, 5000000.00000000000000000001234567891234567891234567891234567981324567891)]
-    [InlineData(8000000, 8000000 + 0.000000000000000000000000000000000000000000001231)]
-    public void FailTests_ValidatePrecisionsDiffOperationDecimalPrecisions(decimal number, decimal precisionNumber1Above)
+    [Fact]
+    public void FailTests_ExplicitalDeclarations()
     {
-        var difference = precisionNumber1Above - number;
-        var roundedDifference = Math.Round(difference, 2, MidpointRounding.ToPositiveInfinity);
-        Assert.NotEqual(0.01m, roundedDifference);
+        decimal b = 15.0000000000000000000000000000001m;
+        decimal c = 80.0000000000000000000000004565411m;
+        decimal d = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001m;
+        decimal e = 5000000.00000000000000000001234567891234567891234567891234567981324567891m;
+        decimal f = 8000000 + 0.000000000000000000000000000000000000000000001231m;
+
+        decimal numberb = 15.00m;
+        decimal numberc = 80;
+        decimal numberd = 0;
+        decimal numbere = 5000000;
+        decimal numberf = 8000000;
+
+        Assert.NotEqual(0.01m, b - numberb);
+        Assert.NotEqual(0.01m, c - numberc);
+        Assert.NotEqual(0.01m, d - numberd);
+        Assert.NotEqual(0.01m, e - numbere);
+        Assert.NotEqual(0.01m, f - numberf);
+
+        double b1 = 15.0000000000000000000000000000001;
+        double c1 = 80.0000000000000000000000004565411;
+        double d1 = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
+        double e1 = 5000000.00000000000000000001234567891234567891234567891234567981324567891;
+        double f1 = 8000000 + 0.000000000000000000000000000000000000000000001231;
+
+        double numberb1 = 15.00;
+        double numberc1 = 80;
+        double numberd1 = 0;
+        double numbere1 = 5000000;
+        double numberf1 = 8000000;
+
+        Assert.NotEqual(0.01, b1 - numberb1);
+        Assert.NotEqual(0.01, c1 - numberc1);
+        Assert.NotEqual(0.01, d1 - numberd1);
+        Assert.NotEqual(0.01, e1 - numbere1);
+        Assert.NotEqual(0.01, f1 - numberf1);
     }
 
     [Theory(DisplayName = "Validating difference between two doubles, and rounding it")]
