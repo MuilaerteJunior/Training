@@ -9,8 +9,6 @@ Repository for test and training purposes.
 Training
 └─── C#
 │   └───LearningProjecs
-└─── netcore
-    └───~~DesignPatterns~~
 └─── net60
     └───CasesVerification
     └───DesignPatterns
