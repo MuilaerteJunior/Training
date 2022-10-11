@@ -10,9 +10,10 @@ Training
 └─── C#
 │   └───LearningProjecs
 └─── netcore
-    └───DesignPatterns
+    └───~~DesignPatterns~~
 └─── net60
     └───CasesVerification
+    └───DesignPatterns
 ```
 
 # More about the projects
@@ -23,7 +24,7 @@ Training
         2. Asynchronous operations
         3. Language Internals 
 
-## Design Patterns (Net core and xUnit)
+## Design Patterns (Net 6.0 and xUnit)
     This project is destinated for design patterns / GanfOfFour (GoF) codes. More detailed informations are inside it.
 
  ## Net 6.0 (Cases Verification)
