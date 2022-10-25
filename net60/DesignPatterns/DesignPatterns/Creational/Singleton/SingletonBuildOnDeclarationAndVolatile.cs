@@ -1,6 +1,6 @@
 
 
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Singleton
 {
     ///Best one!
     public class SingletonBuildOnDeclarationAndVolatile {

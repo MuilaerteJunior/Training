@@ -1,5 +1,5 @@
 
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Singleton
 {
     public class SingletonUsingLock {
         private static SingletonUsingLock _unique;

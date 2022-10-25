@@ -1,5 +1,5 @@
 
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Singleton
 {
     public class SingletonBuildOnDeclaration {
         private static SingletonBuildOnDeclaration _unique = new SingletonBuildOnDeclaration();

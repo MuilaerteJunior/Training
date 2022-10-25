@@ -1,6 +1,6 @@
 
 
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Singleton
 {
     public class SingletonBuildOnDeclarationAndVolatileUsingLock {
         private static volatile SingletonBuildOnDeclarationAndVolatileUsingLock _unique = new SingletonBuildOnDeclarationAndVolatileUsingLock();

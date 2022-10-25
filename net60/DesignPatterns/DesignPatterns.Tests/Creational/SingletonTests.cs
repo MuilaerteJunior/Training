@@ -7,9 +7,11 @@ using System.Threading;
 using System;
 using System.Reflection;
 using System.Collections.Generic;
+using DesignPatterns.Creational.Singleton;
 
 namespace DesignPatterns.Tests.Creational
 {
+
     public class SingletonTests
     {
         [Fact(DisplayName = "Singleton simple")]
