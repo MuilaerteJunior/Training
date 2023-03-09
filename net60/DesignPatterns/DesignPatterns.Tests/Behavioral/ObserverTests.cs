@@ -1,5 +1,6 @@
 using Xunit;
 using DesignPatterns.Behavioral.Observer;
+using System;
 
 namespace DesignPatterns.Tests.Creational
 {
