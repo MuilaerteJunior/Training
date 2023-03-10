@@ -8,6 +8,7 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 using DesignPatterns.Creational.Singleton;
+using System.ComponentModel;
 
 namespace DesignPatterns.Tests.Creational
 {
@@ -200,8 +201,9 @@ namespace DesignPatterns.Tests.Creational
             var firstItem = r.FirstOrDefault();
             Assert.All(r, (item) => item.Equals(firstItem));
         }
-        
-        [Fact(DisplayName = "SingletonBuildOnDeclarationAndVolatileUsingLock -  Check if is the same object is used all the times")]
+
+        [Category("DEBUG")]
+        [Fact(DisplayName = "SingletonBuildOnDeclarationAndVolatileUsingLock -  Check if is the same object is used all the times")]        
         public void CheckIfFromAllUsageIsTheSameObjectReference_SingletonBuildOnDeclarationAndVolatileUsingLock()
         {
             int size = 300;

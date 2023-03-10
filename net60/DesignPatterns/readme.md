@@ -32,10 +32,4 @@
     ### Composite
     ### Bridge
     ### Flyweight
-
-
-
-
-**Pending: **  
-- INTERPRETER
-- MEDIATOR
+    ### Mediator
