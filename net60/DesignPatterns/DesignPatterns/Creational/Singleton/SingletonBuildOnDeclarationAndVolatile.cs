@@ -4,7 +4,9 @@ namespace DesignPatterns.Creational.Singleton
 {
     ///Best one!
     public class SingletonBuildOnDeclarationAndVolatile {
-        private static volatile SingletonBuildOnDeclarationAndVolatile _unique = new SingletonBuildOnDeclarationAndVolatile();
+#pragma warning disable IDE0044 // Add readonly modifier
+        private static volatile SingletonBuildOnDeclarationAndVolatile _unique = new();
+#pragma warning restore IDE0044 // Add readonly modifier
 
         private SingletonBuildOnDeclarationAndVolatile(){}
         
